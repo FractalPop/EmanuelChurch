@@ -1,3 +1,4 @@
+/*
 package com.andreitalpos.emanuelchurch;
 
 
@@ -54,3 +55,4 @@ public class ViewPagerAdapter extends PagerAdapter {
         vp.removeView(view);
     }
 }
+*/
