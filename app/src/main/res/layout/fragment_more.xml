@@ -1,20 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.andreitalpos.emanuelchurch.MoreActivity"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="140dp"
-        android:layout_marginRight="140dp"
-        android:text="TextView"/>
-</RelativeLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/moreCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/timeTextView"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/more_fragment_cards"/>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/serviceTextView"
+            android:layout_marginTop="13dp"
+            android:text="     Sunday Morning - 10am - 12pm - Worship\n\n
+    Sunday Evening - 6pm - 8pm - Worship\n\n
+    Tuesday Night - 7pm - Prayer\n\n
+    Thursday Night - 7pm - 8pm Bible Study\n\n
+    Friday Night - 7pm - 8:30pm - Youth Night\n\n"
+            android:textAppearance="@style/TextAppearance.AppCompat"/>
+
+
+        <TextView
+            android:id="@+id/serviceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linLayout3"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="55dp"
+            android:layout_weight="1"
+            android:text="Service Times"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/emanuelChurchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:elevation="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/church_night"/>
+
+        <LinearLayout
+            android:id="@+id/linLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emanuelChurchView"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/Widget.AppCompat.Button"
+                android:id="@+id/mapButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@color/card_detailing"
+                android:text="@string/view_map"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/youtubeButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@color/card_detailing"
+                android:text="@string/youtube"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linLayout1"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/facebookButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@color/card_detailing"
+                android:text="@string/facebook"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/vimeoButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@color/card_detailing"
+                android:text="@string/vimeo"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linLayout2"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/aboutUsButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@color/card_detailing"
+                android:text="@string/about_us"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/whatWeBelieveButton"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@color/card_detailing"
+                android:text="@string/we_believe"
+                android:textAllCaps="false"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
