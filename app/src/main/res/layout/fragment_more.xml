@@ -51,20 +51,20 @@
             android:textStyle="bold"/>
 
         <ImageView
-            android:id="@+id/emanuelChurchView"
+            android:id="@+id/crossImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:adjustViewBounds="true"
             android:elevation="4dp"
             android:scaleType="fitXY"
-            android:src="@drawable/church_night"/>
+            android:src="@drawable/slide_cross"/>
 
         <LinearLayout
             android:id="@+id/linLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/emanuelChurchView"
+            android:layout_below="@+id/crossImageView"
             android:layout_marginTop="22dp"
             android:orientation="horizontal">
 

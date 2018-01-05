@@ -1,33 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.andreitalpos.emanuelchurch.LiveActivity"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:fillViewport="true">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignTop="@+id/button"
-        android:layout_marginBottom="-15dp"
-        android:layout_marginTop="-15dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/google_cards"/>
+        tools:context="com.andreitalpos.emanuelchurch.LiveActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="92dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="86dp"
-        android:text="Button"/>
+        <ImageView
+            android:id="@+id/liveCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/liveServiceTime"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/more_fragment_cards"/>
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/blackSquare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/liveServiceText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/black_square1"/>
+
+        <ImageButton
+            android:id="@+id/playImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:background="@color/transparent"
+            android:hapticFeedbackEnabled="true"
+            android:scaleType="fitCenter"
+            android:src="@android:drawable/ic_media_play"/>
+
+        <TextView
+            android:id="@+id/liveServiceTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignLeft="@+id/liveServiceText"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/liveServiceText"
+            android:layout_marginBottom="115dp"
+            android:text="    Sunday Morning - 10am - 12pm - Worship\n\n
+    Sunday Evening - 6pm - 8pm - Worship\n\n
+    Tuesday Night - 7pm - Prayer\n\n
+    Thursday Night - 7pm - 8pm Bible Study\n\n
+    Friday Night - 7pm - 8:30pm - Youth Night\n\n"
+            android:textAppearance="@style/TextAppearance.AppCompat"/>
+
+        <TextView
+            android:id="@+id/liveServiceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/liveServiceTime"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_weight="1"
+            android:text="Service Times"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+</ScrollView>

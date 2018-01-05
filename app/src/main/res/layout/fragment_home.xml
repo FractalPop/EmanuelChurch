@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
@@ -8,37 +9,182 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:padding="10dp">
 
         <ImageView
-            android:id="@+id/homeCardView"
+            android:id="@+id/homeCardView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/verseADayTextLink"
             android:adjustViewBounds="true"
-            android:baselineAlignBottom="true"
-            android:scaleType="fitXY"
             android:src="@drawable/more_fragment_cards"/>
 
+        <ImageView
+            android:id="@+id/bibleImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/bible"/>
+
         <TextView
-            android:id="@+id/verseTextView"
+            android:id="@+id/votdTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/votdVerseView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:text="Verse of the Day"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/votdVerseView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView3"
+            android:layout_below="@+id/bibleImageView"
             android:layout_marginTop="10dp"
-            android:text="TextView"/>
+            android:paddingBottom="10dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="..."
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/votdVerseReferenceText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/verseTextView"
-            android:layout_alignParentTop="true"
-            android:layout_alignRight="@+id/verseTextView"
+            android:layout_alignEnd="@+id/homeCardView1"
+            android:layout_alignRight="@+id/homeCardView1"
+            android:layout_below="@+id/votdVerseView"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="9dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/verseADayTextLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/votdVerseReferenceText"
+            android:layout_alignStart="@+id/votdVerseReferenceText"
+            android:layout_below="@+id/votdVerseReferenceText"
+            android:layout_marginLeft="9dp"
+            android:layout_marginStart="9dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:textColor="#009999"
+            android:textSize="11sp"/>
+
+        <ImageView
+            android:id="@+id/homeCardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/eventText"
+            android:layout_below="@+id/homeCardView1"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="true"
+            android:paddingTop="25dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/more_fragment_cards"/>
+
+        <TextView
+            android:id="@+id/eventText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/eventsImageView"
+            android:layout_marginTop="14dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="..."
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+
+        <ImageView
+            android:id="@+id/eventsImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeCardView1"
+            android:layout_marginTop="11dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/events"/>
+
+        <ImageView
+            android:id="@+id/homeCardView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/homeCardView2"
+            android:layout_alignBottom="@+id/serviceTimeTextView"
+            android:adjustViewBounds="true"
+            android:paddingTop="15dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/more_fragment_cards"/>
+
+        <TextView
+            android:id="@+id/eventsImageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/eventText"
+            android:layout_alignLeft="@+id/votdTextView"
+            android:layout_alignStart="@+id/votdTextView"
+            android:layout_marginBottom="10dp"
+            android:text="Events"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/homeChurchAtNightImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/homeCardView2"
             android:layout_marginTop="16dp"
-            android:text="TextView"/>
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/church_night"/>
+
+        <TextView
+            android:id="@+id/homeServiceTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/eventsImageText"
+            android:layout_alignStart="@+id/eventsImageText"
+            android:layout_below="@+id/homeChurchAtNightImage"
+            android:layout_marginTop="15dp"
+            android:text="Service Times"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/serviceTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeServiceTimeText"
+            android:textSize="16sp"
+            android:text="         Sunday Morning - 10am - 12pm - Worship\n\n
+        Sunday Evening - 6pm - 8pm - Worship\n\n
+        Tuesday Night - 7pm - Prayer\n\n
+        Thursday Night - 7pm - 8pm Bible Study\n\n
+        Friday Night - 7pm - 8:30pm - Youth Night\n\n"/>
 
 
     </RelativeLayout>
